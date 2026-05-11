@@ -1,0 +1,29 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Xcode / iOS native
+.DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.pbxuser
+
+# Angular / Node
+node_modules/
+dist/
+tmp/
+out-tsc/
+.angular/cache/
+npm-debug.log
+yarn-error.log
+coverage/
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/

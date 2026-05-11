@@ -1,0 +1,117 @@
+<main class="app-shell">
+  <section class="workspace">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">WycklOptics Legacy Capacitor</p>
+        <h1>Age signal prototype</h1>
+      </div>
+
+      <div class="readiness" [style.--value]="readiness()">
+        <span>{{ readiness() }}%</span>
+        <small>ready</small>
+      </div>
+    </header>
+
+    <section class="control-grid">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Signal Source</h2>
+          <span class="badge">{{ mode() }}</span>
+        </div>
+
+        <div class="segmented">
+          @for (item of modes; track item) {
+            <button
+              type="button"
+              [class.active]="mode() === item"
+              (click)="setMode(item)"
+            >
+              {{ item }}
+            </button>
+          }
+        </div>
+
+        @if (mode() === 'sandbox') {
+          <div class="scenario-list">
+            @for (scenario of scenarios; track scenario.id) {
+              <button
+                type="button"
+                [class.selected]="currentScenario().id === scenario.id"
+                (click)="setScenario(scenario.id)"
+              >
+                <span>{{ scenario.label }}</span>
+                <small>{{ scenario.status }}</small>
+              </button>
+            }
+          </div>
+        } @else {
+          <div class="native-actions">
+            <button type="button" (click)="requestAppleSignal()" [disabled]="appleBusy()">
+              Request Age
+            </button>
+            <button type="button" class="secondary" (click)="checkAppleAvailability()" [disabled]="appleBusy()">
+              Check Native
+            </button>
+          </div>
+          <p class="status">{{ appleStatus() }}</p>
+        }
+      </div>
+
+      <div class="panel output">
+        <div class="panel-header">
+          <h2>UI Output</h2>
+          <span class="badge strong">{{ derivedOutput().tier }}</span>
+        </div>
+
+        <div class="signal-card">
+          <span class="label">Age range</span>
+          <strong>
+            @if (activeSignal().status === 'shared') {
+              {{ activeSignal().lowerBound ?? 0 }}-{{ activeSignal().upperBound ?? 'up' }}
+            } @else {
+              {{ activeSignal().label }}
+            }
+          </strong>
+          <p>{{ derivedOutput().experience }}</p>
+        </div>
+
+        <div class="rules">
+          <span [class.on]="derivedOutput().declaredAgeRequired">Declared age required</span>
+          <span [class.on]="derivedOutput().parentalConsentRequired">Parental consent</span>
+          <span [class.on]="derivedOutput().adultNotificationRequired">Adult notification</span>
+          <span [class.on]="derivedOutput().communicationLimited">Limited communication</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Prototype Controls</h2>
+          <span class="badge">{{ exposure() }}</span>
+        </div>
+
+        <label class="slider">
+          <span>Focus</span>
+          <input type="range" min="0" max="100" [ngModel]="focus()" (ngModelChange)="focus.set(+$event)" />
+        </label>
+
+        <label class="slider">
+          <span>Exposure</span>
+          <input type="range" min="0" max="100" [ngModel]="exposure()" (ngModelChange)="exposure.set(+$event)" />
+        </label>
+
+        <label class="note">
+          <span>Note</span>
+          <textarea [ngModel]="note()" (ngModelChange)="note.set($event)" rows="4"></textarea>
+        </label>
+      </div>
+
+      <div class="panel native-log">
+        <div class="panel-header">
+          <h2>Native Payload</h2>
+          <span class="badge">JSON</span>
+        </div>
+        <pre>{{ lastApplePayload() || '{ "source": "sandbox", "message": "Use Apple mode to call the native plugin." }' }}</pre>
+      </div>
+    </section>
+  </section>
+</main>
