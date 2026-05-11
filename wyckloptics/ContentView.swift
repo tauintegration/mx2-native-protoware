@@ -6,61 +6,81 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @State private var focusScore = 72.0
+    @State private var selectedPreset = 0
+    @State private var checks = [
+        OpticsCheck(title: "Clean lens", isComplete: true),
+        OpticsCheck(title: "Set focus", isComplete: false),
+        OpticsCheck(title: "Check exposure", isComplete: false)
+    ]
+
+    private let presets = ["Portrait", "Product", "Landscape"]
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        ZStack {
+            Color(red: 0.08, green: 0.10, blue: 0.12)
+                .ignoresSafeArea()
+
+            VStack(alignment: .leading, spacing: 24) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Wyckl Optics")
+                        .font(.system(size: 36, weight: .bold))
+                        .foregroundColor(.white)
+
+                    Text("Shot setup")
+                        .font(.title3)
+                        .foregroundColor(.mint)
+                }
+
+                VStack(alignment: .leading, spacing: 16) {
+                    Picker("Preset", selection: $selectedPreset) {
+                        ForEach(presets.indices, id: \.self) { index in
+                            Text(presets[index]).tag(index)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+
+                    HStack {
+                        Text("Focus")
+                        Spacer()
+                        Text("\(Int(focusScore))%")
+                            .fontWeight(.semibold)
+                    }
+
+                    Slider(value: $focusScore, in: 0...100, step: 1)
+
+                    VStack(spacing: 12) {
+                        ForEach($checks) { $check in
+                            Toggle(check.title, isOn: $check.isComplete)
+                                .toggleStyle(SwitchToggleStyle(tint: .mint))
+                        }
+                    }
+
+                    Button(action: resetSetup) {
+                        Text("Reset Setup")
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.mint)
+                            .foregroundColor(.black)
+                            .cornerRadius(10)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .padding(20)
+                .background(Color.white)
+                .cornerRadius(16)
+
+                Spacer()
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+            .padding(24)
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
+    private func resetSetup() {
+        focusScore = 72
+        selectedPreset = 0
+        checks = checks.map { OpticsCheck(title: $0.title, isComplete: false) }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
-}
-
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

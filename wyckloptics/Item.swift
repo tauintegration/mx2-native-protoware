@@ -6,13 +6,9 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
-final class Item {
-    var timestamp: Date
-    
-    init(timestamp: Date) {
-        self.timestamp = timestamp
-    }
+struct OpticsCheck: Identifiable {
+    let id = UUID()
+    let title: String
+    var isComplete: Bool
 }
