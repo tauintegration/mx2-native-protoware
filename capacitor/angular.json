@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "wyckloptics-capacitor": {
+    "protoware-capacitor": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wyckloptics-capacitor",
+            "outputPath": "dist/protoware-capacitor",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -87,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wyckloptics-capacitor:build:production"
+              "buildTarget": "protoware-capacitor:build:production"
             },
             "development": {
-              "buildTarget": "wyckloptics-capacitor:build:development"
+              "buildTarget": "protoware-capacitor:build:development"
             }
           },
           "defaultConfiguration": "development"

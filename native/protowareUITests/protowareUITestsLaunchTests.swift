@@ -1,13 +1,13 @@
 //
-//  wycklopticsUITestsLaunchTests.swift
-//  wycklopticsUITests
+//  protowareUITestsLaunchTests.swift
+//  protowareUITests
 //
 //  Created by PC on 5/8/26.
 //
 
 import XCTest
 
-final class wycklopticsUITestsLaunchTests: XCTestCase {
+final class protowareUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -1,13 +1,13 @@
 //
-//  wycklopticsUITests.swift
-//  wycklopticsUITests
+//  protowareUITests.swift
+//  protowareUITests
 //
 //  Created by PC on 5/8/26.
 //
 
 import XCTest
 
-final class wycklopticsUITests: XCTestCase {
+final class protowareUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

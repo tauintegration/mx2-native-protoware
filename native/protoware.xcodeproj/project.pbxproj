@@ -12,37 +12,37 @@
 			containerPortal = A910E84E2FAEC82700FB5B77 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A910E8552FAEC82700FB5B77;
-			remoteInfo = wyckloptics;
+			remoteInfo = protoware;
 		};
 		A910E8712FAEC82A00FB5B77 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A910E84E2FAEC82700FB5B77 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A910E8552FAEC82700FB5B77;
-			remoteInfo = wyckloptics;
+			remoteInfo = protoware;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A910E8562FAEC82700FB5B77 /* wyckloptics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wyckloptics.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A910E8662FAEC82A00FB5B77 /* wycklopticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wycklopticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A910E8702FAEC82A00FB5B77 /* wycklopticsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wycklopticsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A910E8562FAEC82700FB5B77 /* protoware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = protoware.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A910E8662FAEC82A00FB5B77 /* protowareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = protowareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A910E8702FAEC82A00FB5B77 /* protowareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = protowareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A910E8582FAEC82700FB5B77 /* wyckloptics */ = {
+		A910E8582FAEC82700FB5B77 /* protoware */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = wyckloptics;
+			path = protoware;
 			sourceTree = "<group>";
 		};
-		A910E8692FAEC82A00FB5B77 /* wycklopticsTests */ = {
+		A910E8692FAEC82A00FB5B77 /* protowareTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = wycklopticsTests;
+			path = protowareTests;
 			sourceTree = "<group>";
 		};
-		A910E8732FAEC82A00FB5B77 /* wycklopticsUITests */ = {
+		A910E8732FAEC82A00FB5B77 /* protowareUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = wycklopticsUITests;
+			path = protowareUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		A910E84D2FAEC82700FB5B77 = {
 			isa = PBXGroup;
 			children = (
-				A910E8582FAEC82700FB5B77 /* wyckloptics */,
-				A910E8692FAEC82A00FB5B77 /* wycklopticsTests */,
-				A910E8732FAEC82A00FB5B77 /* wycklopticsUITests */,
+				A910E8582FAEC82700FB5B77 /* protoware */,
+				A910E8692FAEC82A00FB5B77 /* protowareTests */,
+				A910E8732FAEC82A00FB5B77 /* protowareUITests */,
 				A910E8572FAEC82700FB5B77 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		A910E8572FAEC82700FB5B77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A910E8562FAEC82700FB5B77 /* wyckloptics.app */,
-				A910E8662FAEC82A00FB5B77 /* wycklopticsTests.xctest */,
-				A910E8702FAEC82A00FB5B77 /* wycklopticsUITests.xctest */,
+				A910E8562FAEC82700FB5B77 /* protoware.app */,
+				A910E8662FAEC82A00FB5B77 /* protowareTests.xctest */,
+				A910E8702FAEC82A00FB5B77 /* protowareUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A910E8552FAEC82700FB5B77 /* wyckloptics */ = {
+		A910E8552FAEC82700FB5B77 /* protoware */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A910E87A2FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "wyckloptics" */;
+			buildConfigurationList = A910E87A2FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "protoware" */;
 			buildPhases = (
 				A910E8522FAEC82700FB5B77 /* Sources */,
 				A910E8532FAEC82700FB5B77 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A910E8582FAEC82700FB5B77 /* wyckloptics */,
+				A910E8582FAEC82700FB5B77 /* protoware */,
 			);
-			name = wyckloptics;
+			name = protoware;
 			packageProductDependencies = (
 			);
-			productName = wyckloptics;
-			productReference = A910E8562FAEC82700FB5B77 /* wyckloptics.app */;
+			productName = protoware;
+			productReference = A910E8562FAEC82700FB5B77 /* protoware.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A910E8652FAEC82A00FB5B77 /* wycklopticsTests */ = {
+		A910E8652FAEC82A00FB5B77 /* protowareTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A910E87D2FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "wycklopticsTests" */;
+			buildConfigurationList = A910E87D2FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "protowareTests" */;
 			buildPhases = (
 				A910E8622FAEC82A00FB5B77 /* Sources */,
 				A910E8632FAEC82A00FB5B77 /* Frameworks */,
@@ -131,18 +131,18 @@
 				A910E8682FAEC82A00FB5B77 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A910E8692FAEC82A00FB5B77 /* wycklopticsTests */,
+				A910E8692FAEC82A00FB5B77 /* protowareTests */,
 			);
-			name = wycklopticsTests;
+			name = protowareTests;
 			packageProductDependencies = (
 			);
-			productName = wycklopticsTests;
-			productReference = A910E8662FAEC82A00FB5B77 /* wycklopticsTests.xctest */;
+			productName = protowareTests;
+			productReference = A910E8662FAEC82A00FB5B77 /* protowareTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A910E86F2FAEC82A00FB5B77 /* wycklopticsUITests */ = {
+		A910E86F2FAEC82A00FB5B77 /* protowareUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A910E8802FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "wycklopticsUITests" */;
+			buildConfigurationList = A910E8802FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "protowareUITests" */;
 			buildPhases = (
 				A910E86C2FAEC82A00FB5B77 /* Sources */,
 				A910E86D2FAEC82A00FB5B77 /* Frameworks */,
@@ -154,13 +154,13 @@
 				A910E8722FAEC82A00FB5B77 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A910E8732FAEC82A00FB5B77 /* wycklopticsUITests */,
+				A910E8732FAEC82A00FB5B77 /* protowareUITests */,
 			);
-			name = wycklopticsUITests;
+			name = protowareUITests;
 			packageProductDependencies = (
 			);
-			productName = wycklopticsUITests;
-			productReference = A910E8702FAEC82A00FB5B77 /* wycklopticsUITests.xctest */;
+			productName = protowareUITests;
+			productReference = A910E8702FAEC82A00FB5B77 /* protowareUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A910E8512FAEC82700FB5B77 /* Build configuration list for PBXProject "wyckloptics" */;
+			buildConfigurationList = A910E8512FAEC82700FB5B77 /* Build configuration list for PBXProject "protoware" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A910E8552FAEC82700FB5B77 /* wyckloptics */,
-				A910E8652FAEC82A00FB5B77 /* wycklopticsTests */,
-				A910E86F2FAEC82A00FB5B77 /* wycklopticsUITests */,
+				A910E8552FAEC82700FB5B77 /* protoware */,
+				A910E8652FAEC82A00FB5B77 /* protowareTests */,
+				A910E86F2FAEC82A00FB5B77 /* protowareUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		A910E8682FAEC82A00FB5B77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A910E8552FAEC82700FB5B77 /* wyckloptics */;
+			target = A910E8552FAEC82700FB5B77 /* protoware */;
 			targetProxy = A910E8672FAEC82A00FB5B77 /* PBXContainerItemProxy */;
 		};
 		A910E8722FAEC82A00FB5B77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A910E8552FAEC82700FB5B77 /* wyckloptics */;
+			target = A910E8552FAEC82700FB5B77 /* protoware */;
 			targetProxy = A910E8712FAEC82A00FB5B77 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -390,7 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = wyckloptics/wyckloptics.entitlements;
+				CODE_SIGN_ENTITLEMENTS = protoware/protoware.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G99D7C4HS5;
@@ -412,7 +412,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.wyckloptics;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.protoware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -429,7 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = wyckloptics/wyckloptics.entitlements;
+				CODE_SIGN_ENTITLEMENTS = protoware/protoware.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G99D7C4HS5;
@@ -451,7 +451,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.wyckloptics;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.protoware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -474,14 +474,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.7;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.wycklopticsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.protowareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wyckloptics.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wyckloptics";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/protoware.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/protoware";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
@@ -497,14 +497,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.7;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.wycklopticsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.protowareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wyckloptics.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wyckloptics";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/protoware.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/protoware";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;
@@ -519,14 +519,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.7;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.wycklopticsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.protowareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = wyckloptics;
+				TEST_TARGET_NAME = protoware;
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
@@ -541,14 +541,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.7;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.wycklopticsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wycklops.ai.protowareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = wyckloptics;
+				TEST_TARGET_NAME = protoware;
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;
@@ -556,7 +556,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A910E8512FAEC82700FB5B77 /* Build configuration list for PBXProject "wyckloptics" */ = {
+		A910E8512FAEC82700FB5B77 /* Build configuration list for PBXProject "protoware" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A910E8782FAEC82A00FB5B77 /* Debug */,
@@ -565,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A910E87A2FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "wyckloptics" */ = {
+		A910E87A2FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "protoware" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A910E87B2FAEC82A00FB5B77 /* Debug */,
@@ -574,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A910E87D2FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "wycklopticsTests" */ = {
+		A910E87D2FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "protowareTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A910E87E2FAEC82A00FB5B77 /* Debug */,
@@ -583,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A910E8802FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "wycklopticsUITests" */ = {
+		A910E8802FAEC82A00FB5B77 /* Build configuration list for PBXNativeTarget "protowareUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A910E8812FAEC82A00FB5B77 /* Debug */,
