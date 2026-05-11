@@ -56,3 +56,5 @@ pod install
 ## native — build & run
 
 Open `native/protoware.xcodeproj` in Xcode, select a simulator or device, and hit Run.
+
+> Xcode 26 required — [download from Apple](https://developer.apple.com/download/all/?q=xcode%2026.0)
