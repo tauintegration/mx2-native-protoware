@@ -1,3 +1,8 @@
+
+# Android example
+<img width="373" height="858" alt="android" src="https://github.com/user-attachments/assets/3ea1909e-95fa-4de6-8519-8cbf2aecb4f2" />
+
+
 # mx2-protoware
 
 Two-app prototype repo. Each subdirectory is an independent build.
