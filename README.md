@@ -20,7 +20,7 @@
      /Applications/Android Studio.app/Contents/jbr/Contents/Home
 
      We changed it to JDK 21:
-     /Users/choipco/Library/Java/JavaVirtualMachines/openjdk-21.0.1/Contents/Home
+     /Users/username/Library/Java/JavaVirtualMachines/openjdk-21.0.1/Contents/Home
   5. SDK existed, but Gradle could not see it
      Android Studio installed the SDK at:
      ~/Library/Android/sdk
