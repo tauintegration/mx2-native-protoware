@@ -46,14 +46,14 @@
           </div>
         } @else {
           <div class="native-actions">
-            <button type="button" (click)="requestAppleSignal()" [disabled]="appleBusy()">
+            <button type="button" (click)="requestNativeSignal()" [disabled]="nativeBusy()">
               Request Age
             </button>
-            <button type="button" class="secondary" (click)="checkAppleAvailability()" [disabled]="appleBusy()">
+            <button type="button" class="secondary" (click)="checkNativeAvailability()" [disabled]="nativeBusy()">
               Check Native
             </button>
           </div>
-          <p class="status">{{ appleStatus() }}</p>
+          <p class="status">{{ nativeStatus() }}</p>
         }
       </div>
 
@@ -110,7 +110,7 @@
           <h2>Native Payload</h2>
           <span class="badge">JSON</span>
         </div>
-        <pre>{{ lastApplePayload() || '{ "source": "sandbox", "message": "Use Apple mode to call the native plugin." }' }}</pre>
+        <pre>{{ lastNativePayload() || '{ "source": "sandbox", "message": "Use native mode to call the platform plugin." }' }}</pre>
       </div>
     </section>
   </section>

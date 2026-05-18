@@ -1,4 +1,4 @@
-export type AgeSignalMode = 'sandbox' | 'apple';
+export type AgeSignalMode = 'sandbox' | 'native';
 
 export interface AgeScenario {
   id: string;

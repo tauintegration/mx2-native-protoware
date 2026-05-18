@@ -15,14 +15,14 @@ import {
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  protected readonly modes: AgeSignalMode[] = ['sandbox', 'apple'];
+  protected readonly modes: AgeSignalMode[] = ['sandbox', 'native'];
   protected readonly scenarios = sandboxScenarios;
 
   protected readonly mode = signal<AgeSignalMode>('sandbox');
   protected readonly selectedScenarioId = signal('16to17');
-  protected readonly appleStatus = signal('Not requested yet.');
-  protected readonly appleBusy = signal(false);
-  protected readonly lastApplePayload = signal('');
+  protected readonly nativeStatus = signal('Not requested yet.');
+  protected readonly nativeBusy = signal(false);
+  protected readonly lastNativePayload = signal('');
   protected readonly focus = signal(70);
   protected readonly exposure = signal(42);
   protected readonly note = signal('Capacitor shell mirrors the native age signal flow.');
@@ -39,7 +39,7 @@ export class AppComponent {
       return this.currentScenario();
     }
 
-    return this.applePayloadToScenario();
+    return this.nativePayloadToScenario();
   });
 
   protected readonly derivedOutput = computed<DerivedAgeOutput>(() => {
@@ -113,75 +113,79 @@ export class AppComponent {
     this.selectedScenarioId.set(id);
   }
 
-  protected async requestAppleSignal(): Promise<void> {
-    this.mode.set('apple');
-    this.appleBusy.set(true);
-    this.appleStatus.set('Opening native declared age request...');
+  protected async requestNativeSignal(): Promise<void> {
+    this.mode.set('native');
+    this.nativeBusy.set(true);
+    this.nativeStatus.set('Opening native declared age request...');
 
     try {
       const result = await AgeSignal.requestDeclaredAge({ ageGates: [13, 16, 18] });
-      this.lastApplePayload.set(JSON.stringify(result, null, 2));
+      this.lastNativePayload.set(JSON.stringify(result, null, 2));
 
       if (!result.available) {
-        this.appleStatus.set(result.message ?? 'Declared Age Range is unavailable here.');
+        this.nativeStatus.set(result.message ?? 'Declared Age Range is unavailable here.');
         return;
       }
 
       if (result.status === 'shared') {
-        this.appleStatus.set('Apple returned a declared age range.');
+        this.nativeStatus.set(`${this.sourceLabel(result.source)} returned a declared age range.`);
       } else if (result.status === 'declined') {
-        this.appleStatus.set('The person declined to share their age range.');
+        this.nativeStatus.set('The person declined to share their age range.');
       } else {
-        this.appleStatus.set(result.message ?? 'No age range is required for this context.');
+        this.nativeStatus.set(result.message ?? 'No age range is required for this context.');
       }
     } catch (error) {
-      this.appleStatus.set('Native plugin call failed.');
-      this.lastApplePayload.set(JSON.stringify(error, null, 2));
+      this.nativeStatus.set('Native plugin call failed.');
+      this.lastNativePayload.set(JSON.stringify(error, null, 2));
     } finally {
-      this.appleBusy.set(false);
+      this.nativeBusy.set(false);
     }
   }
 
-  protected async checkAppleAvailability(): Promise<void> {
-    this.mode.set('apple');
-    this.appleBusy.set(true);
+  protected async checkNativeAvailability(): Promise<void> {
+    this.mode.set('native');
+    this.nativeBusy.set(true);
 
     try {
       const result = await AgeSignal.checkAvailability();
-      this.lastApplePayload.set(JSON.stringify(result, null, 2));
-      this.appleStatus.set(result.message ?? (result.available ? 'Native API is available.' : 'Native API is unavailable.'));
+      this.lastNativePayload.set(JSON.stringify(result, null, 2));
+      this.nativeStatus.set(result.message ?? (result.available ? 'Native API is available.' : 'Native API is unavailable.'));
     } catch (error) {
-      this.appleStatus.set('Native availability check failed.');
-      this.lastApplePayload.set(JSON.stringify(error, null, 2));
+      this.nativeStatus.set('Native availability check failed.');
+      this.lastNativePayload.set(JSON.stringify(error, null, 2));
     } finally {
-      this.appleBusy.set(false);
+      this.nativeBusy.set(false);
     }
   }
 
-  private applePayloadToScenario(): AgeScenario {
-    if (!this.lastApplePayload()) {
+  private nativePayloadToScenario(): AgeScenario {
+    if (!this.lastNativePayload()) {
       return {
-        id: 'apple-pending',
-        label: 'Apple pending',
+        id: 'native-pending',
+        label: 'Native pending',
         status: 'notAvailable',
       };
     }
 
     try {
-      const parsed = JSON.parse(this.lastApplePayload());
+      const parsed = JSON.parse(this.lastNativePayload());
       return {
-        id: 'apple',
-        label: 'Apple signal',
+        id: 'native',
+        label: `${this.sourceLabel(parsed.source)} signal`,
         lowerBound: parsed.lowerBound,
         upperBound: parsed.upperBound,
         status: parsed.status === 'shared' ? 'shared' : parsed.status === 'declined' ? 'declined' : 'notAvailable',
       };
     } catch {
       return {
-        id: 'apple-error',
-        label: 'Apple error',
+        id: 'native-error',
+        label: 'Native error',
         status: 'notAvailable',
       };
     }
+  }
+
+  private sourceLabel(source: string | undefined): string {
+    return source === 'google' ? 'Google Play' : source === 'apple' ? 'Apple' : 'Native';
   }
 }
